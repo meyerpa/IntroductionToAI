@@ -9,9 +9,18 @@ public class RunGA {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String args[]) {
+		/*
 		int populationSize = 20;
 		int tournamentsSize = 2;
 		double crossoverProb = 0.7;
+		double mutationProb = 0.001;
+		int maxNumOfGenerations = 50;
+		double bestFitness = 0.0;
+		*/
+
+		int populationSize = 20;
+		int tournamentsSize = 2;
+		double crossoverProb = 0.63;
 		double mutationProb = 0.001;
 		int maxNumOfGenerations = 50;
 		double bestFitness = 0.0;
@@ -28,6 +37,7 @@ public class RunGA {
 		yAverageFitness[0] = ga.getAverageFitness();
 
 		for (int i = 0; i < maxNumOfGenerations; i++) {
+			// ga.printPopulation();
 			double bestFitnessCurrentRound;
 			ga.runOneGeneration();
 			bestFitnessCurrentRound = ga.getBestFitness();
